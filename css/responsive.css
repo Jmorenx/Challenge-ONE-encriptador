@@ -1,0 +1,67 @@
+@media screen and (max-width: 780px){
+    
+    .mainGrid {
+        display: grid;
+        grid-template-areas: "derecha"
+                             "botones"
+                             "izquierda";
+        grid-template-rows: 4fr 1fr;
+        grid-template-columns: 1fr;
+        height: 100%;
+    }
+
+    .decryptCopyButtonArea {
+        height: 230px;
+        width: 90%;
+    }
+
+    .decryptText {
+        height: 45%;
+    }
+
+    .copyButton {
+        height: 50%;
+    }
+
+    #imagenBusqueda {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .mainGrid {
+        grid-template-rows: 1fr 1fr 1fr;
+        height: 80%;
+    }
+
+    .textArea {
+        height: 300px;
+    }
+    
+    #textoEntrada{
+        margin-left: 12%;
+        width: 80%;
+    }
+
+    .buttons {
+        margin-left: 0%;
+    }
+
+    .decryptText {
+        height: 55%;
+    }
+
+    #btnDecrypt {
+        width: 90%;
+        margin-top: 1%;
+        margin-bottom: 3%;
+    }
+
+    #btnEncrypt {
+        width: 90%;
+        margin-bottom: 1%;
+        margin-left: 5%;
+    }
+
+}

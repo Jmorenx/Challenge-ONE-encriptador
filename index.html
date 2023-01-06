@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptador</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/script.js"></script>
+    <script src="package/dist/sweetalert2.all.min.js"></script>
+</head>
+<body class="bodyGrid">
+    <header class="headerGrid">
+        <img id="imagenLogo" src="img/logo.png" alt="logo alura">
+    </header>
+    <main class="mainGrid">
+        <section class="textArea">
+            <textarea id="textoEntrada" placeholder="Escribe tu texto aquí" spellcheck="false"></textarea>
+        </section>
+        <section class="decryptCopyButtonArea">
+            <div class="search-img">
+                <img id="imagenBusqueda" src="img/busqueda.gif" alt="Imagen de busqueda">
+            </div>
+            <div class="textArea2">
+                <h2 id="text1">Ningún mensaje fué encontrado</h2>
+                <h3 id="text2">Ingresa el texto que desees encriptar o desencriptar</h3>
+            </div>
+            <div class="decryptText">
+                <textarea id="textoDesencriptado" spellcheck="false"></textarea>
+            </div>
+            <div class="copyButton">
+                <button class="btnCopy" id="btnCopy" role="button"><span class="textCopy">Copiar</span></button>
+            </div>
+        </section>
+        <section class="messageButtonsArea">
+            <div class="message">
+                <img id="exclamationIcon" src="img/Vector.png" alt="Signo de exclamación">
+                <p id="textoAdvertencia">Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="buttons">
+                <button class="btnEncrypt" id="btnEncrypt" role="button"><span class="textEncrypt">Encriptar</span></button>
+                <button class="btnDecrypt" id="btnDecrypt" role="button"><span class="textDecript">Desencriptar</span></button>
+            </div>
+        </section>
+    </main>
+    <footer class="footerGrid">
+        <p>Hecho por Jorge Moreno | <a href="https://www.aluracursos.com/" target="__blank">Alura ONE</a></p>
+    </footer>
+</body>
+
+<script>
+    var btn = document.querySelector("#btnEncrypt");
+    btn.onclick = encrypt;
+    var btn1 = document.querySelector("#btnDecrypt");
+    btn1.onclick = decrypt;
+    var btn2 = document.querySelector("#btnCopy");
+    btn2.onclick = copy;
+</script>
+
+</html>
